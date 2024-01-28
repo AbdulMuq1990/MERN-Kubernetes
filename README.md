@@ -1,3 +1,6 @@
+Create a .env file in backend folder, this repo doesnt have
+
+
 ------- Create an EC2 t2-medium instance with below userdata & ports in security group ------
 
 #!/bin/bash
