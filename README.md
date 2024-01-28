@@ -44,3 +44,9 @@ Custom tcp 3000 ()
 
 ---------------------------------------------------------------------------------------------------------
 Login to MONGODB Atlas https://cloud.mongodb.com/v2/65adf6b57077165110fabeb5#/security/network/accessList 
+
+
+dashboard--> click on Network Access --> click Add IP Address
+Take Public IP of EC2 Instance and Add it here 
+
+
