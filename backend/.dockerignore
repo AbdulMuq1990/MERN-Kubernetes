@@ -1,0 +1,5 @@
+#Create this .dockerignore file in both backend & frontend directory
+
+node_modules
+Dockerfile*
+.git;

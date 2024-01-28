@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongo
+    #environment:        #environment not required, since we have already pulled from .env into nodejs image
+     #MONGO_INITDB_ROOT_USERNAME: muqtadeer
+     #MONGO_INITDB_ROOT_PASSWORD: welcome
+     #MONGO_INITDB_DATABASE: cool_notes_app
+    ports:
+      - "5000:27017"    #default port of MONGO is 27017, mapped with 5000
+    volumes:
+      - mongodb-data:/data/db
+
+  # Node.js (Express) backend service
+  backend:
+    image: node-image
+    container_name: nodejs
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongodb
+    #environment:
+     #MONGO_HOST: mongodb
+     #MONGO_PORT: 5000
+     #MONGO_DB: my-db  # Change this to your desired MongoDB database name
+
+  # React frontend service
+  frontend:
+    image: react-image
+    container_name: react
+    ports:
+      - "3333:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongodb-data:
