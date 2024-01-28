@@ -52,8 +52,10 @@ Take Public IP of EC2 Instance and Add it here
 ------------------------------------------------------------------------------------------------------
 Clone source code (Create a apps directory in root directory)
 
-cd /        
-mkdir apps 
+cd /
+
+mkdir apps
+
 cd apps/
 
 App/# git clone https://github.com/AbdulMuq1990/MERN-Docker.git
